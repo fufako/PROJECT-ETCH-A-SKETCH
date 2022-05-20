@@ -47,6 +47,11 @@ input {
   padding: 5px;
   color: inherit;
 }
+button:hover,
+input:hover {
+  transform: scale(1.1) perspective(1px);
+}
+
 .grid {
   display: grid;
   width: 500px;
