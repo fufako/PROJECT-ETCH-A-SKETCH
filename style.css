@@ -10,16 +10,17 @@ body {
   justify-content: center;
   margin: 0 auto;
 }
+.settings {
+  display: flex;
+  flex-direction: column;
+}
 .grid {
   display: grid;
   width: 500px;
   height: 500px;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(16, 1fr);
+  border: 1px black solid;
 }
-.square {
-  background: rgba(0, 0, 0, 0.1);
-  border: 1px white solid;
-  height: 50px;
-  width: 50px;
+.grid-item {
+  margin: 0px;
+  padding: 0px;
 }
