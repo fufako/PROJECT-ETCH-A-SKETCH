@@ -7,6 +7,7 @@ let currentColor = DEFAULT_COLOR
 
 function setCurrentColor(newColor) {
   currentColor = newColor
+  colorChanger.style.backgroundColor = newColor
 }
 
 function setCurrentMode(newMode) {
@@ -22,7 +23,7 @@ const rainbowBtn = document.getElementById("rainbow")
 const eraseBtn = document.getElementById("erase")
 const clearBtn = document.getElementById("clear")
 
-size.onchange = (e) => createGrid(e.target.value)
+size.onchange = (e) => changeSize(e.target.value)
 colorChanger.onchange = (e) => setCurrentColor(e.target.value)
 colorBtn.onclick = (e) => setCurrentMode(e.target.id)
 rainbowBtn.onclick = (e) => setCurrentMode(e.target.id)
@@ -31,7 +32,7 @@ clearBtn.onclick = () => reloadGrid()
 
 function createGrid(size) {
   clearGrid()
-  updateShowSize()
+
   grid.style.gridTemplateColumns = "repeat(" + size + ", 1fr)"
   grid.style.gridTemplateRows = "repeat(" + size + ", 1fr)"
   for (let i = 0; i <= size * size; i++) {
@@ -48,8 +49,12 @@ function reloadGrid() {
 function clearGrid() {
   grid.innerHTML = ""
 }
+function changeSize(size) {
+  updateShowSize()
+  createGrid(size)
+}
 function updateShowSize() {
-  showSize.textContent = size.value + "x" + size.value
+  showSize.textContent = size.value + " x " + size.value
 }
 
 function changeColor(e) {
@@ -62,7 +67,7 @@ function changeColor(e) {
     e.target.style.backgroundColor =
       "rgb(" + randomR + ", " + randomG + ", " + randomB + ")"
   } else if (currentMode === "erase") {
-    e.target.style.backgroundColor = "white"
+    e.target.style.backgroundColor = "#fffaf0"
   }
 }
 

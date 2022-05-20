@@ -1,26 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Space+Grotesk:wght@300&display=swap");
+
 body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #fff8dc;
+  font-family: "Indie Flower", cursive;
 }
 .container {
   display: flex;
   align-items: center;
-  gap: 100px;
   justify-content: center;
   margin: 0 auto;
+  flex-direction: column;
+  background-color: #e90418;
+  padding: 0 40px 40px 40px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px 3px rgb(0 0 0 / 71%);
+}
+.header {
+  color: #fff8dc;
 }
 .settings {
   display: flex;
   flex-direction: column;
+  padding-top: 40px;
+  align-items: center;
+  justify-content: center;
+}
+#modeHandler {
+  display: flex;
+  margin-bottom: 5px;
+}
+button,
+input {
+  margin: 5px;
+  background-color: #fff8dc;
+  border: 0px;
+  border-radius: 5px;
+  font-family: "Indie Flower", cursive;
+  padding: 5px;
 }
 .grid {
   display: grid;
   width: 500px;
   height: 500px;
-  border: 1px black solid;
+  border-color: #fffff0;
+  background-color: #fffaf0;
+  border-style: inset;
 }
 .grid-item {
   margin: 0px;
   padding: 0px;
+}
+#showSize {
+  text-align: center;
+  color: #fff8dc;
+  margin: 0;
+  padding: 0;
+}
+#colorChanger {
+  -webkit-appearance: none;
+  padding: 0;
+  border: none;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+}
+#colorChanger::-webkit-color-swatch {
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+}
+#colorChanger::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+}
+#sizeChange {
+  -webkit-appearance: none;
+  height: 1px;
+  margin: 0;
+}
+
+::-webkit-progress-value {
+  background-color: red;
 }
