@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Space+Grotesk:wght@300&display=swap");
 
+:root {
+  --light: #fff8dc;
+  --secondary: black;
+}
+
 body {
   display: flex;
   align-items: center;
@@ -40,6 +45,7 @@ input {
   border-radius: 5px;
   font-family: "Indie Flower", cursive;
   padding: 5px;
+  color: inherit;
 }
 .grid {
   display: grid;
@@ -77,12 +83,23 @@ input {
   border-radius: 10px;
   padding: 0;
 }
-#sizeChange {
+input[type="range"] {
   -webkit-appearance: none;
-  height: 1px;
-  margin: 0;
+  background-color: var(--light);
 }
 
-::-webkit-progress-value {
-  background-color: red;
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px;
+  border: 1px solid var(--light);
+  border-radius: 25px;
+  background: var(--light);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  margin-top: -8px;
+  background: var(--secondary);
 }
