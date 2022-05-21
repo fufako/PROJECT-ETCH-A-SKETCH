@@ -12,6 +12,19 @@ function setCurrentColor(newColor) {
 
 function setCurrentMode(newMode) {
   currentMode = newMode
+  if (newMode === "color") {
+    colorBtn.style.backgroundColor = "#fffaf0"
+    rainbowBtn.style.backgroundColor = "#fff8dc"
+    eraseBtn.style.backgroundColor = "#fff8dc"
+  } else if (newMode === "rainbow") {
+    rainbowBtn.style.backgroundColor = "#fffaf0"
+    eraseBtn.style.backgroundColor = "#fff8dc"
+    colorBtn.style.backgroundColor = "#fff8dc"
+  } else if (newMode === "erase") {
+    eraseBtn.style.backgroundColor = "#fffaf0"
+    colorBtn.style.backgroundColor = "#fff8dc"
+    rainbowBtn.style.backgroundColor = "#fff8dc"
+  }
 }
 
 const grid = document.getElementById("grid")
