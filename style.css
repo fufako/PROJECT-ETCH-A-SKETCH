@@ -11,6 +11,7 @@ body {
   justify-content: center;
   background-color: #fff8dc;
   font-family: "Indie Flower", cursive;
+  flex-direction: column;
 }
 .container {
   display: flex;
@@ -25,6 +26,18 @@ body {
 }
 .header {
   color: #fff8dc;
+}
+.footer {
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  margin-top: 2%;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: #e90418;
 }
 .settings {
   display: flex;
